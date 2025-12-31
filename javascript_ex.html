@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <title>랜덤 이모지 계산기</title>
+
+  <style>
+    body {
+      background: #f5f5f5;
+      font-family: Arial, sans-serif;
+    }
+
+    .calculator {
+      width: 320px;
+      margin: 50px auto;
+      padding: 20px;
+      background: white;
+      border-radius: 20px;
+      text-align: center;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    }
+
+    .character {
+      font-size: 60px;
+      margin-bottom: 10px;
+    }
+
+    input {
+      width: 100px;
+      font-size: 20px;
+      padding: 5px;
+    }
+
+    button {
+      font-size: 18px;
+      padding: 6px 12px;
+      border-radius: 10px;
+      cursor: pointer;
+    }
+
+    #result {
+      display: block;
+      margin-top: 15px;
+      font-size: 26px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="calculator">
+    <div class="character">🐭✨</div>
+    <h2>덧셈 계산기 🎲</h2>
+
+    <input type="number" id="num1" value="2">
+    +
+    <input type="number" id="num2" value="3">
+    <button onclick="calculate()">=</button>
+
+    <span id="result">5 🎉</span>
+
+    <br><br>
+    <button onclick="resetCalc()">초기화</button>
+  </div>
+
+  <script>
+    const emojis = ["🎉", "😺", "🍀", "✨", "😆", "💡"];
+
+    function calculate() {
+      const a = Number(document.getElementById("num1").value);
+      const b = Number(document.getElementById("num2").value);
+
+      const sum = a + b;
+      const randomEmoji = emojis[Math.floor(Math.random() * emojis.length)];
+
+      document.getElementById("result").textContent =
+        sum + " " + randomEmoji;
+    }
+
+    function resetCalc() {
+      document.getElementById("num1").value = "";
+      document.getElementById("num2").value = "";
+      document.getElementById("result").textContent = "";
+    }
+  </script>
+</body>
+</html>
