@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>홍콩반점 메뉴</title>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      color: #333;
+      margin: 16px;
+      line-height: 1.4;
+      font-size: 13px;          /* 전체 글자 작게 */
+    }
+
+    header h1 {
+      color: #c0392b;
+      font-size: 28px;          /* 제목도 살짝 축소 */
+      margin: 0 0 6px 0;
+    }
+
+    header p {
+      margin: 0 0 10px 0;
+    }
+
+    nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 12px 0;
+    }
+
+    nav li {
+      display: inline-block;
+      margin-right: 12px;
+    }
+
+    nav a {
+      color: #2980b9;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    section {
+      margin-top: 16px;
+    }
+
+    h2 {
+      color: #2c3e50;
+      border-bottom: 2px solid #ddd;
+      padding-bottom: 4px;
+      margin-bottom: 8px;
+      font-size: 18px;
+    }
+
+    /* ✅ 핵심 수정 */
+    article {
+      width: 420px;                 /* 3개 박스 가로 동일 */
+      padding: 8px 10px;
+      margin: 6px 0;
+      border: 1px solid #ddd;
+      border-radius: 6px;
+      background: #fffbe6;          /* 연한 노랑 */
+      box-sizing: border-box;
+    }
+
+    article h3 {
+      margin: 0 0 6px 0;
+      font-size: 15px;
+    }
+
+    article p {
+      margin: 3px 0;
+    }
+
+    strong {
+      color: #d35400;
+    }
+
+    footer {
+      margin-top: 16px;
+      padding-top: 10px;
+      border-top: 2px solid #ccc;
+      font-size: 12px;              /* 하단 정보 더 작게 */
+    }
+
+    footer p {
+      margin: 4px 0;
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <h1>🍜 홍콩반점</h1>
+  <p><em>정통 중화요리 전문점</em></p>
+</header>
+
+<nav>
+  <ul>
+    <li><a href="#main">메인 메뉴</a></li>
+    <li><a href="#side">사이드 메뉴</a></li>
+    <li><a href="#info">매장 정보</a></li>
+  </ul>
+</nav>
+
+<main>
+
+  <section id="main">
+    <h2>메인 메뉴</h2>
+
+    <article>
+      <h3>짜장면</h3>
+      <p>가격: <strong>6,000원</strong></p>
+      <p>둘이 먹다가 하나 꼴가닥! 주인장 책임못짐</p>
+    </article>
+
+    <article>
+      <h3>짬뽕</h3>
+      <p>가격: <strong>7,000원</strong></p>
+      <p>매콤한 국물이 특징</p>
+    </article>
+  </section>
+
+  <section id="side">
+    <h2>사이드 메뉴</h2>
+
+    <article>
+      <h3>탕수육</h3>
+      <p>가격: <strong>15,000원</strong></p>
+      <p>바삭한 튀김 + 새콤달콤 소스</p>
+    </article>
+  </section>
+
+</main>
+
+<footer id="info">
+  <p><strong>영업시간:</strong> 연중무휴 24시간 빡세게 돌립니다</p>
+  <p><strong>주소:</strong> 부산시 포동포동 남포동 어딘가?!</p>
+</footer>
+
+</body>
+</html>
