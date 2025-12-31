@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>재미있는 웹페이지</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin-top: 100px;
+    }
+    button {
+      font-size: 20px;
+      padding: 10px 20px;
+      cursor: pointer;
+    }
+    #msg {
+      margin-top: 30px;
+      font-size: 24px;
+      color: teal;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>🎉 버튼을 눌러보세요 🎉</h1>
+  <button onclick="changeMessage()">눌러!</button>
+
+  <div id="msg"></div>
+
+  <script>
+    function changeMessage() {
+      const messages = [
+        "오늘도 잘하고 있어요 😆",
+        "HTML 생각보다 쉽죠? 😆 이제 오지수는 html 이해 완료입니다",
+        "이제 웹페이지 만드는 사람임 👍"
+      ];
+      const random = Math.floor(Math.random() * messages.length);
+      document.getElementById("msg").innerText = messages[random];
+    }
+  </script>
+
+</body>
+</html>
